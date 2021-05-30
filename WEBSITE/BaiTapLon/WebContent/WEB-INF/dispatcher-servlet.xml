@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+            http://www.springframework.org/schema/context
+	    http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	    http://www.springframework.org/schema/mvc
+            http://www.springframework.org/schema/mvc/spring-mvc.xsd"
+           >
+	    <context:component-scan base-package="controller" ></context:component-scan>
+	   
+	    <bean
+	        class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	        <property name="prefix" value="/WEB-INF/views/"></property>
+	        <property name="suffix" value=".jsp"></property>
+    	</bean>
+    	<mvc:annotation-driven />
+    	<mvc:resources mapping="/static/**" location="/static/"/>
+    	<bean id="multipartResolver"   class="org.springframework.web.multipart.commons.CommonsMultipartResolver" /> 
+    	<bean id="ds"   class="org.springframework.jdbc.datasource.DriverManagerDataSource">   
+	    	<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>   
+	    	<property name="url" value="jdbc:sqlserver://localhost:1433;databaseName=DungCuTheThao"></property>   
+	    	<property name="username" value="sa"></property>   
+	    	<property name="password" value="sapassword"></property>  
+    	</bean>  
+    	
+ 		<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">   
+ 			<property name="dataSource" ref="ds"></property>  
+ 		</bean> 
+ 		<bean id="account" class="dao.AcountDao">
+ 			<property name="template" ref="jt"></property>  
+ 		</bean>
+ 		<bean id="pdao" class="dao.ProductDao">   
+ 			<property name="template" ref="jt"></property>  
+ 		</bean> 
+ 		<bean id="pcdao" class="dao.ProductCategoryDao">   
+ 			<property name="template" ref="jt"></property>  
+ 		</bean> 
+ 		<bean id="billdao" class="dao.BillDao">
+ 			<property name="template" ref="jt"></property>  
+ 		</bean>
+ 		<bean id="billinfodao" class="dao.BillinfoDao">
+ 			<property name="template" ref="jt"></property>  
+ 		</bean>
+ 		
+</beans>

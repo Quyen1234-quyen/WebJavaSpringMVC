@@ -1,0 +1,86 @@
+*{
+    padding:0;
+    margin:0;
+}
+@font-face{
+	font-family:header;
+	src:url(./../fonts/Merriweather-Bold.ttf) format('truetype');
+	font-size:normal;	
+	font-weight:normal;
+}
+.sanpham{
+    font-family: header;
+    margin-top:40px;
+}
+.sanpham h3{
+    padding: 0;
+    margin: 0;
+}
+.sanpham h3:after{
+    width: 100px;
+    height: 2px;
+    background-color: rgb(231, 78, 17);	
+    display: block;
+    content:"";
+    margin:0 auto;
+    margin-top:30px;
+}
+.sanpham .product{
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px rgb(231, 78, 17);	
+    padding:5px 5px 30px 5px;
+    margin-top:30px;
+}
+
+.sanpham .product a button{
+    color:#000;
+    border:none;
+    background: transparent !important;
+    border:2px solid  rgb(231, 78, 17);	
+    padding:10px 30px;
+    border-radius: 3px;
+}
+#shop{
+    position: fixed;
+    z-index: 1;
+    top:40%;
+    right: 10px;
+    height: 100px;
+    display: none;
+}
+.btn-shop.active{
+    visibility: true;
+}
+#shop .cart{
+	font-size: 282%;
+	border:1px solid rgb(231, 78, 17);	
+	border-radius: 50%;
+	padding:13px;
+	color:rgb(231, 78, 17);	
+	position: relative;
+	z-index: 99;
+	margin-top: 10px;
+	-webkit-transition: all 0.2s ease-in-out;  
+	-moz-transition: all 0.2s ease-in-out;  
+	transition: all 0.2s ease-in-out;
+}
+#shop .soluong	{
+	width:28px;
+	text-align: center;
+	position: absolute;
+	font-size: 21px;
+	color:white;
+	top:16px;
+	left:22px;
+	-webkit-transition: all 0.2s ease-in-out;  
+	-moz-transition: all 0.2s ease-in-out;  
+	transition: all 0.2s ease-in-out;
+}
+#shop a >span:hover{
+	background: rgb(231, 78, 17);	
+	color: white;
+	border:1px solidrgb(27, 177, 40);
+}
+#shop a>span:hover .soluong{
+	color:rgb(231, 78, 17);	
+}

@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face{
+	font-family:h1;
+	src:url(./../fonts/Merriweather-Bold.ttf) format('truetype');
+	font-size:normal;	
+	font-weight:normal;
+}
+.slide{
+	background-image: url(./../images/logo/slide.jpg)  ;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+   
+}
+
+.slide .black{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.5;
+}
+.slide h1{
+    position: absolute;
+    top: 40%;
+    left:50%;
+    font-size: 40px;
+    transform: translate(-50%,-50%);    
+    text-shadow: 0 2px 5px rgba(0, 0, 0,.5);
+    font-family: h1;
+    font-weight: 700;
+    color:white;
+}
+
+.slide span{
+    color:rgb(231, 78, 17);	
+}
+.slide h2{
+    position: absolute;
+
+    top: 50%;
+    left:50%;
+    font-size: 30px;
+    transform: translate(-50%,-50%);    
+    text-shadow: 0 2px 5px rgba(0, 0, 0,.5);
+    color:white;
+    font-family: h1;
+}
+.slide ul{
+    position: absolute;
+
+    top: 64%;
+    left:50%;
+    transform: translate(-50%,-50%);    
+    text-shadow: 0 2px 5px rgba(0, 0, 0,.5);
+}
+.slide ul li span{
+    width: 40px;
+    height: 40px;
+    border:1px solid #fff;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    color:white ;
+    transition: all ease-in .3s;
+}
+.slide ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin:0 5px;
+}
+.slide ul li a:hover span{
+   color:rgb(231, 78, 17) ;
+   border:1px solid rgb(231, 78, 17);	
+}
+
+
+
+
+

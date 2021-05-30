@@ -1,0 +1,16 @@
+*{
+    padding:0;
+    margin:0;
+}
+.blog{
+    height: 400px;
+    border:1px solid #000;
+}
+.gioithieu{
+    height: 400px;
+    border:1px solid #000;
+}
+.lienhe{
+    height: 400px;
+    border:1px solid #000;
+}
